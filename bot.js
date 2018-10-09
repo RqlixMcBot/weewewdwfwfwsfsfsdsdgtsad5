@@ -80,6 +80,17 @@ client.on('message', message => {
 });
 
 
+client.on('message', message => {
+        if (message.content.toLowerCase() === prefix + "رابط") {
+            if(!message.channel.guild) return;
+        let embed = new Discord.RichEmbed()
+        .setTitle(`:small_orange_diamond: `)
+        .setURL(`https://discord.gg/NzXpgV`)
+     message.channel.sendEmbed(embed);
+       }
+   });
+
+
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
